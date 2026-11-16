@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BSc Modern Web &amp; Systems Engineering</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>BSc in Modern Web &amp; Systems Engineering</h1>
+      <p>
+        Our three-year undergraduate study programme blends full-stack web architecture,
+        distributed networking, and human-centered software design. Students build production-grade
+        HTTP services from first principles before advancing to cloud infrastructure.
+      </p>
+    </header>
+
+    <section class="explorer" aria-labelledby="explorer-heading">
+      <h2 id="explorer-heading">Interactive API Explorer</h2>
+      <p>Click any endpoint below to test the server directly from your browser:</p>
+
+      <div class="button-grid">
+        <button type="button" data-method="GET" data-url="/api/courses">GET /api/courses</button>
+        <button type="button" data-method="GET" data-url="/api/status">GET /api/status</button>
+        <button type="button" data-method="GET" data-url="/api/headers">GET /api/headers</button>
+        <button type="button" data-method="POST" data-url="/api/subscribe">POST /api/subscribe</button>
+        <button type="button" data-method="GET" data-url="/api/admin">GET /api/admin</button>
+        <button type="button" data-method="GET" data-url="/api/stats">GET /api/stats</button>
+        <button type="button" data-method="GET" data-url="/api/does-not-exist" class="btn-secondary">
+          GET /api/does-not-exist (404)
+        </button>
+      </div>
+
+      <div class="output-panel">
+        <div class="output-meta">
+          <span><strong>Endpoint:</strong> <code id="req-endpoint">None</code></span>
+          <span><strong>HTTP Status:</strong> <code id="res-status">—</code></span>
+        </div>
+        <pre id="res-body">Click an endpoint button to inspect the response...</pre>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

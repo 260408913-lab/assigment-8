@@ -1,0 +1,106 @@
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #e2e8f0;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --code-bg: #1e293b;
+  --code-text: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 820px;
+  margin: 2.5rem auto;
+  padding: 0 1.25rem;
+}
+
+header,
+.explorer {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.25rem 0;
+}
+
+button {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button.btn-secondary {
+  background-color: #64748b;
+}
+
+button.btn-secondary:hover {
+  background-color: #475569;
+}
+
+.output-panel {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.output-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #f1f5f9;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+pre {
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  overflow-x: auto;
+  min-height: 160px;
+  font-size: 0.9rem;
+}
